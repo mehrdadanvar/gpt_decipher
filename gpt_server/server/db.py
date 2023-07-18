@@ -9,8 +9,8 @@ print("client connected")
 questionsdatabase = client["questions"]
 names = questionsdatabase.list_collection_names()
 for item in names:
-    print("heyyyyyyyyyyyyyyyyyyyyyy",item)
+    print("heyyyyyyyyyyyyyyyyyyyyyy", item)
 usersdatabase = client["users"]
 newnames = usersdatabase.list_collection_names()
 for i in newnames:
-    print(i,"usssssssssssser database")
+    print(i, "usssssssssssser database")

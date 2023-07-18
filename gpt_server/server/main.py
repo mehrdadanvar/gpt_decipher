@@ -20,4 +20,4 @@ app.add_middleware(
 
 @app.get("/")
 def root():
-    return{"data":"123"}
+    return {"data": "123"}
