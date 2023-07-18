@@ -9,11 +9,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify-json/solar": "^1.1.1",
+    "@nuxt/content": "^2.7.0",
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxthq/ui": "^2.5.0",
     "@types/node": "^18",
-    "autoprefixer": "^10.4.14",
-    "nuxt": "^3.6.2",
-    "postcss": "^8.4.25"
+    "nuxt": "^3.6.2"
+  },
+  "dependencies": {
+    "openai": "^3.3.0"
   }
 }
