@@ -1,12 +1,15 @@
 <template>
   <div class="register flex flex-row rounded-3xl border border-teal-200 shadow-slate-300 shadow-xl">
-    <div>
-      <img src="register.jpg" alt="" class="rounded-l-3xl" />
+    <div class="">
+      <img src="/tri2.svg" alt="" class="" />
     </div>
-    <form @submite.prevent class="mx-auto mt-6 flex flex-col gap-y-16">
+    <form
+      @submit.prevent
+      class="mx-auto mt-6 flex flex-col gap-y-16 backdrop-blur-sm backdrop-brightness-100 md:backdrop-blur-0 md:backdrop-brightness-100"
+    >
       <h1 class="text-2xl text-gray-700">Welcome to GPT Decipher Project</h1>
       <div class="flex flex-col mx-auto gap-y-10">
-        <div class="flex flex-row gap-3">
+        <div class="flex flex-col gap-3 sm:flex-row">
           <UInput
             size="xl"
             color="teal"
@@ -39,7 +42,7 @@
           <UInput
             size="xl"
             color="teal"
-            placeholder="More than 6 chracters"
+            placeholder="More than 6 characters"
             type="password"
             v-model="password"
             icon="i-solar-lock-password-bold-duotone"
@@ -54,7 +57,7 @@
           />
         </div>
         <USelectMenu
-          v-model="speciality"
+          v-model="specialty"
           :options="specials"
           searchable
           icon="i-solar-buildings-2-bold-duotone"
@@ -64,13 +67,11 @@
         />
       </div>
       <div class="flex flex-col items-center gap-6">
-        <UButton size="xl" lable="Create Account" color="teal" variant="solid" @click="createUser"
+        <UButton size="xl" label="Create Account" color="teal" variant="solid" @click="createUser"
           >Create Account</UButton
         >
 
-        <NuxtLink to="/login"
-          >Already a Member? <span class="text-teal-500 italic">Login</span></NuxtLink
-        >
+        <NuxtLink to="/login">Already a Member? <span class="text-teal-500 italic">Login</span></NuxtLink>
       </div>
     </form>
   </div>
@@ -116,19 +117,19 @@ let specials = [
   "Urology",
   "Vascular Surgery",
 ];
-let speciality = ref(specials[4]);
+let specialty = ref(specials[4]);
 async function createUser() {
   console.log("user data about to be sent");
-  console.log(firstname.value, lastname.value, email.value, password.value), speciality.value;
+  console.log(firstname.value, lastname.value, email.value, password.value), specialty.value;
   try {
-    let response = await fetch("http://localhost:8000/users", {
+    let response = await fetch("http://localhost:8000/users/signup", {
       method: "POST",
       body: JSON.stringify({
         firstname: firstname.value,
         lastname: lastname.value,
         email: email.value,
         password: password.value,
-        speciality: speciality.value,
+        specialty: specialty.value,
       }),
       headers: {
         "Content-Type": "application/json",

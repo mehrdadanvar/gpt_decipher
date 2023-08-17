@@ -1,6 +1,5 @@
 <template>
-  <section class="flex flex-row">
-    <DashSidebar />
+  <section class="">
     <div>
       <UButton label="Open" @click="profiledata.is_open = true" />
       <USlideover v-model="profiledata.is_open">

@@ -10,14 +10,8 @@
       </div>
     </div>
     <div class="flex flex-row gap-3 mt-24">
-      <button
-        class="bg-teal-400 text-lg text-white rounded-full w-2/5 h-12 transitionall ease-linear duration-100 hover:w-3/5"
-      >
-        How ?
-      </button>
-      <button
-        class="bg-white border border-slate-200 text-lg text-slate-700 rounded-full w-2/5 transitionall ease-linear duration-100 hover:w-3/5"
-      >
+      <button class="bg-teal-400 text-lg text-white rounded-full w-2/5 h-12">How ?</button>
+      <button class="bg-white border border-slate-200 text-lg text-slate-700 rounded-full w-2/5">
         <NuxtLink to="register">Register</NuxtLink>
       </button>
     </div>
@@ -55,6 +49,12 @@ async function delay() {
 }
 
 delay();
+async function show_bottons() {
+  setTimeout(() => {
+    console.log("time out working");
+  }, 2000);
+}
+show_bottons();
 </script>
 
 <style scoped>

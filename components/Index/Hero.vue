@@ -1,11 +1,9 @@
 <template>
-  <div
-    class="flex flex-row w-7/12 m-auto rounded-3xl border border-slate-100 shadow-slate-300 shadow-xl"
-  >
+  <div class="flex flex-row w-7/12 m-auto rounded-3xl border border-slate-100 shadow-slate-300 shadow-xl">
     <div class="p-1 w-7/12">
       <IndexHeroPlay />
     </div>
-    <img src="/person.jpg" alt="" class="rounded-r-3xl photo w-5/12" />
+    <img src="/tri2.svg" alt="" class="rounded-r-3xl photo w-5/12" />
   </div>
 </template>
 

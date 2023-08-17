@@ -3,9 +3,12 @@
     <main>
       <div class="register flex flex-row rounded-3xl border border-cyan-500">
         <div>
-          <img src="register.jpg" alt="" class="rounded-l-3xl" />
+          <img src="/register.jpg" alt="" class="rounded-l-3xl" />
         </div>
-        <form class="mx-auto mt-6 flex flex-col items-center" @submit.prevent="chech_empty">
+        <form
+          class="mx-auto mt-6 flex flex-col items-center"
+          @submit.prevent="chech_empty"
+        >
           <h1 class="text-2xl">Welcome to GPT Decipher Project</h1>
           <div class="flex flex-row gap-3 mx-auto mt-6">
             <UInput
@@ -24,7 +27,12 @@
             />
           </div>
           <div class="mt-12">
-            <button class="bg-cyan-400 text-white w-36 h-9 rounded-full" @click="">Sign In</button>
+            <button
+              class="bg-cyan-400 text-white w-36 h-9 rounded-full"
+              @click="login2"
+            >
+              Log In
+            </button>
           </div>
         </form>
       </div>
@@ -55,6 +63,26 @@ async function login() {
     });
     console.log({ email: user.email, password: user.password });
     console.log(response);
+  } catch (error) {
+    error ? console.log(error) : "";
+  }
+
+  let condition = false;
+  if (condition) {
+  }
+}
+const headers = useRequestHeaders(["cookie"]);
+async function login2() {
+  console.log(headers);
+  try {
+    let user = login_user.value;
+    console.log(user);
+    let { data } = await useFetch("http://localhost:8000/users/login", {
+      method: "POST",
+      body: JSON.stringify({ email: user.email, password: user.password }),
+      headers: { someheader: "mehrdad" },
+    });
+    console.log({ email: user.email, password: user.password });
   } catch (error) {
     error ? console.log(error) : "";
   }

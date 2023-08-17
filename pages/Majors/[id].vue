@@ -1,13 +1,12 @@
 <template>
-  <main>
-    <DashMain />
-  </main>
+  <div>
+    {{ id }}
+  </div>
 </template>
 
 <script setup>
-definePageMeta({
-  layout: "dash",
-});
+let route = useRoute();
+let id = route.params;
 </script>
 
 <style lang="scss" scoped></style>
