@@ -41,31 +41,31 @@ let menuItems = [
     id: "0",
     title: "Dashboard",
     iconName: "i-solar-qr-code-bold-duotone",
-    path: "/dashboard/Index",
+    path: "/gpt/dashboard/Index",
   },
   {
     id: "1",
     title: "Cases",
     iconName: "i-solar-dna-bold-duotone",
-    path: "/dashboard/Cases",
+    path: "/gpt/dashboard/Cases",
   },
   {
     id: "2",
     title: "Create Code",
     iconName: "i-solar-sidebar-code-bold-duotone",
-    path: "/dashboard/Json",
+    path: "/gpt/dashboard/Json",
   },
   {
     id: "3",
     title: "Settings",
     iconName: "i-solar-settings-bold-duotone",
-    path: "/dashboard/Settings",
+    path: "/gpt/dashboard/Settings",
   },
   {
     id: "4",
     title: "Log Out",
     iconName: "i-solar-upload-bold-duotone",
-    path: "/dashboard/Logout",
+    path: "/gpt/dashboard/Logout",
   },
 ];
 </script>
